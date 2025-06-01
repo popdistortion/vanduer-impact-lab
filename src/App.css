@@ -45,7 +45,8 @@ input[type="file"]:focus {
 
 /* Buttons */
 button {
-  background-color: #FAF5D9;
+  background-color: #000;
+  color: #FAF5D9;
   border: 2px solid #000;
   border-radius: 9999px;
   padding: 10px 20px;
@@ -53,23 +54,22 @@ button {
   text-transform: uppercase;
   margin: 6px;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  color: #000;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
 
-  /* Fix vertical alignment */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px; /* spacing between icon and text */
+  gap: 8px;
 }
 
 button:hover {
-  background-color: #000;
+  background-color: #FAF5D9;
+  color: #000;
   border: 2px solid #000;
-  color: #FAF5D9;
 }
+
 button:hover svg {
-  stroke: #FAF5D9;
+  stroke: #000;
 }
 
 /* Icons */
