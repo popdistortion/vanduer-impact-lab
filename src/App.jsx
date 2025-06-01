@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 
 // --- Constants ---
-const API_KEY = ""; // User will provide API key if needed for models other than gemini-2.0-flash
-const API_URL_GEMINI = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${AIzaSyAv4ooCtOTpgu3iTGMLqZgc9XnEiNiaQxc}`;
+const API_KEY = "AIzaSyAv4ooCtOTpgu3iTGMLqZgc9XnEiNiaQxc"; // User will provide API key if needed for models other than gemini-2.0-flash
+const API_URL_GEMINI = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 const PDF_JS_VERSION = "3.4.120"; // A specific version for stability
 const PDF_JS_LIB_URL = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${PDF_JS_VERSION}/pdf.min.js`;
 const PDF_JS_WORKER_URL_TEMPLATE = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${PDF_JS_VERSION}/pdf.worker.min.js`;
