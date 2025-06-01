@@ -1,0 +1,52 @@
+body {
+  background-color: #FAF4DC;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+textarea,
+input[type="file"] {
+  background-color: #FAF4DC;
+  border: 2px dashed #000;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: #111;
+}
+
+textarea:focus,
+input[type="file"]:focus {
+  outline: none;
+  border-color: #000;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  display: block;
+  color: #000;
+}
+
+button {
+  background-color: #FAF4DC;
+  border: 2px solid #000;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #f0eac3;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
