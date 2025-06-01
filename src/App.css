@@ -84,9 +84,41 @@ footer {
 /* Results box */
 .prose {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #111;
+  background-color: #fff;
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  white-space: pre-wrap;
+}
+
+.prose h2,
+.prose h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
   color: #000;
 }
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+.prose ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
 
 /* Tab nav styles */
 .tab-button {
