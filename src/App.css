@@ -27,7 +27,7 @@ label {
 textarea,
 input[type="file"] {
   background-color: #FAF5D9;
-  border: 2px dashed #000;
+  border: 1px dashed #000;
   border-radius: 8px;
   padding: 12px;
   font-size: 14px;
