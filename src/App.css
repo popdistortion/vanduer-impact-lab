@@ -145,3 +145,22 @@ footer {
   border-radius: 6px;
   margin-top: 12px;
 }
+
+/* Loading */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
