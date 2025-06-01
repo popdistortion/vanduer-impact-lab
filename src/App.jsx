@@ -150,6 +150,22 @@ function App() {
             // if (scriptElement) document.body.removeChild(scriptElement);
         };
     }, []);
+// Effect to send iframe size
+useEffect(() => {
+  const resizeObserver = new ResizeObserver(() => {
+    window.parent.postMessage(
+      {
+        type: 'resize-iframe',
+        height: document.body.scrollHeight,
+      },
+      '*'
+    );
+  });
+
+  resizeObserver.observe(document.body);
+
+  return () => resizeObserver.disconnect();
+}, []);
 
 
     const handleFileChange = async (event) => {
