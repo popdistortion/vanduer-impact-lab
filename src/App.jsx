@@ -428,12 +428,15 @@ function App() {
                     {activeTab === 'results' && (
                         <div>
                             <h2 className="text-2xl font-semibold text-gray-800 mb-4">{getAnalysisTitle()}</h2>
-                            {isLoading && ( // Only API loading here
-                                <div className="flex flex-col justify-center items-center p-10">
-                                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-500"></div>
-                                    <p className="ml-4 mt-4 text-gray-600">{analysisType ? `Analysing your text for ${analysisType}...` : "Loading..."}</p>
-                                </div>
-                            )}
+                           {isLoading && (
+  <div className="flex flex-col justify-center items-center p-10">
+    <p className="text-gray-700 text-base flex items-center">
+      {analysisType ? `Analysing your text for ${analysisType}` : "Loading"}
+      <span className="spinner" />
+    </p>
+  </div>
+)}
+
                             {error && (
                                 <div className="mt-4 p-3 bg-red-100 text-red-700 border border-red-300 rounded-lg">
                                     <p className="font-medium">Error:</p>
