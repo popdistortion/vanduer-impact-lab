@@ -257,14 +257,42 @@ function App() {
     };
 
     const formatResults = (text) => {
-        if (!text) return null;
-        return text.split('\n').map((line, index) => (
-            <React.Fragment key={index}>
-                {line}
-                <br />
-            </React.Fragment>
-        ));
-    };
+  if (!text) return null;
+
+  return text.split('\n').map((line, index) => {
+    const trimmed = line.trim();
+
+    // Bullet point detection (keep formatting)
+    if (trimmed.startsWith('* ')) {
+      return (
+        <li key={index} style={{ marginBottom: '0.5rem' }}>
+          {trimmed.replace(/^\* /, '')}
+        </li>
+      );
+    }
+
+    // Bold label pattern, like "**1. Human-Centered Quote:**"
+    if (/^\*\*(.+?)\*\*:/.test(trimmed)) {
+      const label = trimmed.match(/^\*\*(.+?)\*\*:/)[1];
+      const content = trimmed.replace(/^\*\*(.+?)\*\*: */, '');
+      return (
+        <p key={index}>
+          <strong>{label}:</strong> {content}
+        </p>
+      );
+    }
+
+    // Catch any leftover markdown-style bold text and remove the ** marks
+    const cleanLine = trimmed.replace(/\*\*/g, '');
+
+    return (
+      <p key={index} style={{ marginBottom: '1rem' }}>
+        {cleanLine}
+      </p>
+    );
+  });
+};
+
     
     const getAnalysisTitle = () => {
         switch (analysisType) {
