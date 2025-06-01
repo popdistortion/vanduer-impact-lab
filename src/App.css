@@ -55,6 +55,12 @@ button {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   color: #000;
+
+  /* Fix vertical alignment */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* spacing between icon and text */
 }
 
 button:hover {
