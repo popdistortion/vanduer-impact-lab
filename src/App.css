@@ -77,6 +77,11 @@ svg {
   width: 20px;
   height: 20px;
   margin-right: 8px;
+  stroke: #FAF5D9; /* light icon on dark button */
+}
+
+/* On button hover, icons turn black */
+button:hover svg {
   stroke: #000;
 }
 
