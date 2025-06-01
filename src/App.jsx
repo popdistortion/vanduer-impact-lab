@@ -297,7 +297,52 @@ useEffect(() => {
         </p>
       );
     }
+// Tone & Clarity format: "- Problematic Phrase: ... | Suggestion: ..."
+    if (/^- Problematic Phrase:/.test(trimmed)) {
+      const match = trimmed.match(/^- Problematic Phrase: "(.*?)"\s*\|\s*Suggestion: "(.*?)"(.*)?/);
+      if (match) {
+        const phrase = match[1];
+        const suggestion = match[2];
+        const extra = match[3] || '';
+        return (
+          <div key={index} className="mb-4">
+            <p><strong>Problematic Phrase:</strong><br />“{phrase}”</p>
+            <p><strong>Suggestion:</strong><br />“{suggestion}” {extra.trim()}</p>
+          </div>
+        );
+      }
+    }
 
+    // Bullet point (leave unchanged)
+    if (trimmed.startsWith('* ')) {
+      return (
+        <li key={index} style={{ marginBottom: '0.5rem' }}>
+          {trimmed.replace(/^\* /, '')}
+        </li>
+      );
+    }
+
+    // Bold label like "**Something:**"
+    if (/^\*\*(.+?)\*\*:/.test(trimmed)) {
+      const label = trimmed.match(/^\*\*(.+?)\*\*:/)[1];
+      const content = trimmed.replace(/^\*\*(.+?)\*\*: */, '');
+      return (
+        <p key={index}>
+          <strong>{label}:</strong> {content}
+        </p>
+      );
+    }
+
+    // Remove rogue **bold**
+    const cleanLine = trimmed.replace(/\*\*/g, '');
+
+    return (
+      <p key={index} style={{ marginBottom: '1rem' }}>
+        {cleanLine}
+      </p>
+    );
+  }
+}
     // Catch any leftover markdown-style bold text and remove the ** marks
     const cleanLine = trimmed.replace(/\*\*/g, '');
 
