@@ -1,7 +1,7 @@
 /* Global styles */
 body {
-  background-color: #FAF4DC;
-  color: #111;
+  background-color: #FAF5D9;
+  color: #000;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
 h1, h2, h3 {
   font-weight: bold;
   text-transform: uppercase;
-  color: #111;
+  color: #000;
 }
 
 label {
@@ -20,13 +20,13 @@ label {
   letter-spacing: 0.05em;
   margin-bottom: 8px;
   display: block;
-  color: #111;
+  color: #000;
 }
 
 /* Input fields */
 textarea,
 input[type="file"] {
-  background-color: #FAF4DC;
+  background-color: #FAF5D9;
   border: 2px dashed #000;
   border-radius: 8px;
   padding: 12px;
@@ -34,7 +34,7 @@ input[type="file"] {
   width: 100%;
   box-sizing: border-box;
   font-family: inherit;
-  color: #111;
+  color: #000;
 }
 
 textarea:focus,
@@ -45,7 +45,7 @@ input[type="file"]:focus {
 
 /* Buttons */
 button {
-  background-color: #FAF4DC;
+  background-color: #FAF5D9;
   border: 2px solid #000;
   border-radius: 9999px;
   padding: 10px 20px;
@@ -54,10 +54,12 @@ button {
   margin: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
+  color: #000;
 }
 
 button:hover {
-  background-color: #f0eac3;
+  background-color: #000;
+  color: #FAF5D9;
 }
 
 /* Icons */
@@ -65,7 +67,7 @@ svg {
   width: 20px;
   height: 20px;
   margin-right: 8px;
-  stroke: #111;
+  stroke: #000;
 }
 
 /* Footer */
@@ -80,7 +82,7 @@ footer {
 .prose {
   font-size: 16px;
   line-height: 1.6;
-  color: #111;
+  color: #000;
 }
 
 /* Tab nav styles */
