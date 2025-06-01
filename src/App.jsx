@@ -308,10 +308,10 @@ function App() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-teal-600 to-cyan-700 text-gray-800 flex flex-col items-center p-4 md:p-8 font-sans">
-            <header className="w-full max-w-4xl mb-8 text-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">VANDUER ANALYSER</h1>
-                <p className="text-lg text-teal-100">Turn Sustainability Reports into Powerful Narratives</p>
-            </header>
+            {/* <header className="w-full max-w-4xl mb-8 text-center">
+  <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">VANDUER ANALYSER</h1>
+  <p className="text-lg text-teal-100">Turn Sustainability Reports into Powerful Narratives</p>
+</header> */}
 
             <main className="w-full max-w-4xl bg-white shadow-2xl rounded-xl p-6 md:p-8">
                 <div className="mb-6 border-b border-gray-200">
