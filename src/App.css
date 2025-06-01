@@ -61,6 +61,9 @@ button:hover {
   background-color: #000;
   color: #FAF5D9;
 }
+button:hover svg {
+  stroke: #FAF5D9;
+}
 
 /* Icons */
 svg {
